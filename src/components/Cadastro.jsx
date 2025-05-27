@@ -1,7 +1,10 @@
 import React, { useState } from "react";
-import "../assets/styles/Login.css"; // Reaproveitando estilo
+import "../assets/styles/Login.css";
+import { useNavigate } from "react-router-dom";
 
 function Cadastro() {
+  const navigate = useNavigate(); // ✅ Agora está no lugar certo!
+
   const [form, setForm] = useState({
     nome: "",
     nascimento: "",
@@ -17,6 +20,9 @@ function Cadastro() {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Cadastro:", form);
+
+    // Redireciona para a tela de sucesso
+    navigate("/home");
   };
 
   return (
