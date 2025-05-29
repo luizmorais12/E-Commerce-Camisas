@@ -7,7 +7,7 @@ function Cadastro() {
 
   const [form, setForm] = useState({
     nome: "",
-    nascimento: "",
+    dataNascimento: "",
     cpf: "",
     email: "",
     senha: "",
@@ -17,12 +17,32 @@ function Cadastro() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Cadastro:", form);
+    
+    try{
+      const response = await fetch("http://localhost:8080/camisetas/usuario/", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(form),
+      });
 
-    // Redireciona para a tela de sucesso
-    navigate("/home");
+      if(!response.ok) {
+        throw new Error("Erro ao cadastrar");
+      }
+
+      const data = await response.json();
+      console.log("Usuário cadastrado",data);
+
+      // Redireciona para a tela de sucesso
+      navigate("/home");
+      
+    }catch(error){
+      console.error("Erro no cadastro: ",error);
+    }
+
   };
 
   return (
@@ -46,8 +66,8 @@ function Cadastro() {
             <input
               type="date"
               className="form-control"
-              name="nascimento"
-              value={form.nascimento}
+              name="dataNascimento"
+              value={form.dataNascimento}
               onChange={handleChange}
               required
             />
