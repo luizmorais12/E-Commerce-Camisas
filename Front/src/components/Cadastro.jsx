@@ -3,7 +3,7 @@ import "../assets/styles/Login.css";
 import { useNavigate } from "react-router-dom";
 
 function Cadastro() {
-  const navigate = useNavigate(); // ✅ Agora está no lugar certo!
+  const navigate = useNavigate();
 
   const [form, setForm] = useState({
     nome: "",
@@ -17,32 +17,11 @@ function Cadastro() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    
-    try{
-      const response = await fetch("http://localhost:8080/camisetas/usuario/", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(form),
-      });
+    console.log("Simulação de cadastro:", form);
 
-      if(!response.ok) {
-        throw new Error("Erro ao cadastrar");
-      }
-
-      const data = await response.json();
-      console.log("Usuário cadastrado",data);
-
-      // Redireciona para a tela de sucesso
-      navigate("/home");
-      
-    }catch(error){
-      console.error("Erro no cadastro: ",error);
-    }
-
+    navigate("/home"); // redireciona após o cadastro
   };
 
   return (
