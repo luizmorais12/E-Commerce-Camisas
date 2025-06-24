@@ -1,0 +1,5 @@
+# Ignorar qualquer node_modules em qualquer lugar
+**/node_modules
+
+# Opcional: ignorar locks
+**/package-lock.json

@@ -51,7 +51,12 @@ function Navbar() {
             <ul className="dropdown-menu dropdown-menu-end">
               <li><Link className="dropdown-item" to="/login">Login</Link></li>
               <li><Link className="dropdown-item" to="/cadastro">Cadastre-se</Link></li>
+<<<<<<< HEAD
               <li><Link className="dropdown-item" to="/pedidos">Meus Pedidos</Link></li>
+=======
+              <li><Link className="dropdown-item" to="/pedidos">Minha Conta</Link></li>
+              <li><Link className="dropdown-item" to="/ajuda">Meus Pedidos</Link></li>
+>>>>>>> terminando-tela-principal
               <li><Link className="dropdown-item" to="/ajuda">Ajuda</Link></li>
             </ul>
           </div>

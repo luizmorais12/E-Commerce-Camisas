@@ -21,7 +21,12 @@ function Cadastro() {
     e.preventDefault();
     console.log("Simulação de cadastro:", form);
 
+<<<<<<< HEAD
     navigate("/home"); // redireciona após o cadastro
+=======
+    navigate("/"); 
+
+>>>>>>> terminando-tela-principal
   };
 
   return (

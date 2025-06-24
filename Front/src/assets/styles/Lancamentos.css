@@ -1,0 +1,137 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+}
+
+/* Wrapper principal pra centralizar tudo */
+.site-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: #fff;
+}
+
+/* Container da página */
+.page-container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Seções com título */
+.secao-produtos {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.secao-produtos h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #0000ff;
+  letter-spacing: 2px;
+  margin-bottom: 2rem;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 1rem 0;
+}
+
+/* Cards */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.card-produto {
+  width: 250px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 0 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.card-produto:hover {
+  transform: translateY(-5px);
+}
+
+.card-produto img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 0.8rem;
+}
+
+.card-produto h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0.4rem 0;
+}
+
+.card-produto .preco {
+  color: blue;
+  font-weight: bold;
+}
+
+.card-produto .parcelas,
+.card-produto .pix {
+  font-size: 0.9rem;
+  margin: 0.2rem 0;
+}
+
+.card-produto .parcelas span,
+.card-produto .pix span {
+  color: red;
+  font-weight: bold;
+}
+
+.card-produto button {
+  margin-top: 0.8rem;
+  background-color: black;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.card-produto button:hover {
+  background-color: #222;
+}
+.secao-marcas {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.titulo-marcas {
+  font-size: 22px;
+  color: blue;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.marcas-nomes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  font-weight: bold;
+  color: blue;
+  font-size: 14px;
+}

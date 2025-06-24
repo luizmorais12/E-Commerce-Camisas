@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // App.jsx
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
@@ -14,6 +15,12 @@ function App() {
       </Routes>
     </Router>
   );
+=======
+import Home from "./components/Home";
+
+function App() {
+  return <Home />;
+>>>>>>> terminando-tela-principal
 }
 
 export default App;
