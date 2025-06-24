@@ -21,7 +21,8 @@ function Cadastro() {
     e.preventDefault();
     console.log("Simulação de cadastro:", form);
 
-    navigate("/home"); // redireciona após o cadastro
+    navigate("/"); 
+
   };
 
   return (
